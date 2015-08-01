@@ -12,4 +12,18 @@ This is a very rustic implementation of an automatic domain checker. This script
 
 How to use it
 -------------
-If you are here, most likely you know how cron runs and how to edit a script.
+If you are here, most likely you know how cron runs and how to edit a script. So make sure to change the following fields at the beginning of the file:
+
+```
+sender_name = "Whatever Name"
+sender_email = "Whatever Email"
+recipient_name = "Recipient's Name"
+recipient_email = "Recipient's Email"
+ ```
+
+You will need to pass the domains you want to check as arguments:
+```
+# ruby chkdomain.rb domainone.cl domaintwo.cl
+```
+
+That should do it. If you run into issues open a ticket or can improve the code (I'm a ruby beginner after all) submit a pull request.

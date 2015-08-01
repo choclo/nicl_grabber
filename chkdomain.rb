@@ -3,6 +3,11 @@
 require 'nokogiri'
 require 'open-uri'
 
+sender_name = "John Doe"
+sender_email = "john@doe.com"
+recipient_name = "Strange Guy"
+recipient_email = "strange@guy.com"
+
 class Domains
 	def initialize(*domains)
 		@domains = domains
@@ -20,8 +25,8 @@ class Domains
 				puts "\nYour domain #{domain} is already registered :("
 			else
 				message = <<-END_OF_MESSAGE
-				From: Sender Name <sender@server.domain.com>
-				To: Email recipient <email@domain.com>
+				From: #{sender_name} <#{sender_email}>
+				To: #{recipient_name} <#{recipient_email}>
 				Subject: Domain #{domain} Available!
 				Date: #{Time.now}
 
